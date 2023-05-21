@@ -1,0 +1,6 @@
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.csproj.AssemblyReference.cache
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.AssemblyInfoInputs.cache
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.AssemblyInfo.cs
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache

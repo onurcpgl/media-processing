@@ -1,0 +1,5 @@
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
