@@ -2,7 +2,7 @@
 using Bussines.DTO;
 using Bussines.Service.Concrete;
 using Domain.Entities;
-using Domain.Repositories.Concrete;
+using DataAccess.Repositories.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,9 @@ namespace Bussines.Service.Abstract
         }
         public Task<bool> SaveMedia(MediaDTO mediaDto)
         {
-            throw new NotImplementedException();
+            var mapMedia = _mapper.Map<Media>(mediaDto);
+            var result = _genericRepository.Add(mapMedia);
+            return result;
         }
     }
 }

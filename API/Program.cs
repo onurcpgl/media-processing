@@ -3,11 +3,14 @@ using Bussines.Mappings;
 using Bussines.Service.Abstract;
 using Bussines.Service.Concrete;
 using DataAccess.Context;
+using DataAccess.Repositories.Abstract;
+using DataAccess.Repositories.Concrete;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMediaService, MediService>();
 builder.Services.AddScoped<IProductService, ProductService>();
@@ -15,7 +18,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<Context>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL")));
+
+builder.Services.AddDbContext<MediaContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL")));
 
 var mappingConfig = new MapperConfiguration(mc =>
 {
@@ -23,6 +27,8 @@ var mappingConfig = new MapperConfiguration(mc =>
 });
 IMapper mapper = mappingConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

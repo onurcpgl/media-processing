@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YFu7wB/qd6caBjTLg/wEJYA/Udsg7L0kx8RZrP0J+18Qp9Xz3zzPtoiEhzVuJkmtSofcbECSFWBIKKiFqw+IOw==",
+  "dgSpecHash": "YXqloozBQan117HlylKTeF5UkQ1pZRQNKA+Di4hLB9LC14z2EGXgT+iQh6r9JlI9Wu7Bncd5oakugBiRQHb2tA==",
   "success": true,
   "projectFilePath": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\Bussines\\Bussines.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\onurc\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\onurc\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\onurc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\onurc\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\onurc\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
@@ -21,6 +22,7 @@
     "C:\\Users\\onurc\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\onurc\\.nuget\\packages\\npgsql\\7.0.4\\npgsql.7.0.4.nupkg.sha512",
     "C:\\Users\\onurc\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.4\\npgsql.entityframeworkcore.postgresql.7.0.4.nupkg.sha512",
+    "C:\\Users\\onurc\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\onurc\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

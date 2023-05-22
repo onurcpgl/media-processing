@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Bussines.DTO;
 using Bussines.Service.Concrete;
+using DataAccess.Repositories.Concrete;
 using Domain.Entities;
-using Domain.Repositories.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +20,11 @@ namespace Bussines.Service.Abstract
             _genericRepository = genericRepository;
             _mapper = mapper;
         }
-        public Task<bool> SaveUser(UserDTO user)
+        public async Task<bool> SaveUser(UserDTO userDto)
         {
-            throw new NotImplementedException();
+            var mapUser = _mapper.Map<User>(userDto);
+            var result = await _genericRepository.Add(mapUser);
+            return result;
         }
     }
 }
