@@ -12,6 +12,7 @@ namespace Domain.Entities
         public string? Description { get; set; }
         public string? Category { get; set; }
         public int Price { get; set; }
-        
+        public Media? Media { get; set; }
+
     }
 }

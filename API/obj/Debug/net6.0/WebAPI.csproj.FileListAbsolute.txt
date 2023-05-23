@@ -51,3 +51,11 @@ C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\refint\
 C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.pdb
 C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\obj\Debug\net6.0\ref\WebAPI.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\onurc\OneDrive\Masaüstü\media-processing\API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

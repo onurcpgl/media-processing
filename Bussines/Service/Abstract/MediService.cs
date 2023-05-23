@@ -14,16 +14,15 @@ namespace Bussines.Service.Abstract
     public class MediService : IMediaService
     {   
         private readonly IGenericRepository<Media> _genericRepository;
-        private readonly IMapper _mapper;
-        public MediService(IGenericRepository<Media> genericRepository,IMapper mapper)
+        
+        public MediService(IGenericRepository<Media> genericRepository)
         {
             _genericRepository = genericRepository;
-            _mapper = mapper;   
+            
         }
-        public Task<bool> SaveMedia(MediaDTO mediaDto)
+        public Task<Media> SaveMedia(Media media)
         {
-            var mapMedia = _mapper.Map<Media>(mediaDto);
-            var result = _genericRepository.Add(mapMedia);
+            var result = _genericRepository.AddModel(media);
             return result;
         }
     }

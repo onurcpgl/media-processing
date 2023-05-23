@@ -15,5 +15,7 @@ namespace Domain.Entities
         public string AbsolutePath { get; set; }
         public long Size { get; set; }
         public bool Deleted { get; set; }
+        public int? ProductId { get; set; }
+        public Product? Product { get; set; }
     }
 }

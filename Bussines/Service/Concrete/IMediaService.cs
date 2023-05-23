@@ -1,4 +1,5 @@
 ﻿using Bussines.DTO;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Bussines.Service.Concrete
 {
     public interface IMediaService
     {
-        Task<bool> SaveMedia(MediaDTO mediaDto);
+        Task<Media> SaveMedia(Media media);
 
     }
 }
