@@ -15,16 +15,31 @@ namespace Bussines.Service.Abstract
     {
         private readonly IGenericRepository<User> _genericRepository;
         private readonly IMapper _mapper;
-        public UserService(IGenericRepository<User> genericRepository,IMapper mapper)
+        private readonly IMediaService _mediaService;
+        public UserService(IGenericRepository<User> genericRepository,IMapper mapper,IMediaService mediaService)
         {
             _genericRepository = genericRepository;
+            _mediaService = mediaService;
             _mapper = mapper;
         }
         public async Task<bool> SaveUser(UserDTO userDto)
         {
-            var mapUser = _mapper.Map<User>(userDto);
-            var result = await _genericRepository.Add(mapUser);
-            return result;
+            if(userDto.FormFiles != null)
+            {
+                var resultMedia = await _mediaService.SaveMedias(userDto.FormFiles);
+                var mapUser = _mapper.Map<User>(userDto);
+                mapUser.Medias = new List<Media>((IEnumerable<Media>)resultMedia);
+                var result = await _genericRepository.Add(mapUser);
+                return result;
+
+            }
+            else
+            {
+                var mapUser = _mapper.Map<User>(userDto);
+                var result = await _genericRepository.Add(mapUser);
+                return result;
+            }
+            
         }
     }
 }

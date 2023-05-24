@@ -32,38 +32,23 @@ namespace Bussines.Service.Abstract
        
         public async Task<bool> SaveProduct(ProductDTO productDto)
         {
-            if (productDto.FormFile != null)
-            {
-                var todayDate = DateTime.Now.ToString("yyyyMMdd");
-                var todayTime = DateTime.Now.ToString("HHmmss");
-                var rootPath = _config["MediaStorage:FileRootPath"];
-           
-                var filePath = $"myapp/{todayDate}/{todayTime}";
-                var fullPath = $"{rootPath}/{filePath}";
-                var filenamehash = new string(Enumerable.Repeat(chars, 20).Select(s => s[random.Next(s.Length)]).ToArray());
-                Media media = new Media
+            
+                if (productDto.FormFile != null)
                 {
-                    RealFilename = productDto.FormFile.FileName,
-                    EncodedFilename = filenamehash,
-                    FilePath = filePath,
-                    RootPath = rootPath,
-                    AbsolutePath = $"{filePath}/{filenamehash}{Path.GetExtension(productDto.FormFile.FileName)}",
-                    Size = productDto.FormFile.Length,
-                    Deleted = false,
-                };
-                var resultMedia = await _mediaService.SaveMedia(media);
-                var mapProduct = _mapper.Map<Product>(productDto);
-                mapProduct.Media = resultMedia;
-                var result = await _genericRepository.Add(mapProduct);
-                return result;
-            }
-            else
-            {
-                var mapProduct = _mapper.Map<Product>(productDto);
-                var result = await _genericRepository.Add(mapProduct);
-                return result;
-            }
-
+                    var resultMedia = await _mediaService.SaveMedia(productDto.FormFile);
+                    var mapProduct = _mapper.Map<Product>(productDto);
+                    mapProduct.Media = resultMedia;
+                    var result = await _genericRepository.Add(mapProduct);
+                    return result;
+                }
+                else
+                {
+                    var mapProduct = _mapper.Map<Product>(productDto);
+                    var result = await _genericRepository.Add(mapProduct);
+                    return result;
+                }
+            
+            
         }
     }
 }

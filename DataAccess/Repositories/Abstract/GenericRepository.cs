@@ -110,5 +110,17 @@ namespace DataAccess.Repositories.Abstract
             _dbContext.SaveChanges();
             return entityEntry.Entity;
         }
+
+        public async Task<ICollection<T>> AddModels(ICollection<T> entities)
+        {
+            foreach (var entity in entities)
+            {
+                EntityEntry<T> entityEntry = Table.Update(entity);
+            }
+
+            await _dbContext.SaveChangesAsync();
+
+            return entities;
+        }
     }
 }

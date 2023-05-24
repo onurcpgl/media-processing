@@ -12,6 +12,7 @@ namespace DataAccess.Repositories.Concrete
         Task<T> GetById(int id);
         Task<bool> Add(T entity);
         Task<T> AddModel(T entity);
+        Task<ICollection<T>> AddModel(ICollection<T> entities);
         bool Delete(T entity);
         bool Update(T entity);
         IQueryable<T> GetAll(bool tracking = true);

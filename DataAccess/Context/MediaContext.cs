@@ -22,6 +22,11 @@ namespace DataAccess.Context
                 .HasOne(media => media.Product)
                 .WithOne(product => product.Media)
                 .HasForeignKey<Media>(mediaProduct => mediaProduct.ProductId);
+
+            modelBuilder.Entity<Media>()
+                .HasOne(media => media.User)
+                .WithMany(user => user.Medias)
+                .HasForeignKey(mediaUser => mediaUser.UserId); 
         }
 
         public DbSet<User> Users { get; set; }
