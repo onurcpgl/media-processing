@@ -13,14 +13,14 @@ using Microsoft.AspNetCore.Http;
 
 namespace Bussines.Service.Abstract
 {
-    public class MediService : IMediaService
+    public class MediaService : IMediaService
     {
         Random random = new Random();
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         private readonly IGenericRepository<Media> _genericRepository;
         private readonly IConfiguration _config;
 
-        public MediService(IGenericRepository<Media> genericRepository,IConfiguration config)
+        public MediaService(IGenericRepository<Media> genericRepository,IConfiguration config)
         {
             _genericRepository = genericRepository;
             _config = config;
@@ -49,11 +49,11 @@ namespace Bussines.Service.Abstract
             return resultMedia;
         }
 
-        public Task<ICollection<Media>> SaveMedias(ICollection<IFormFile> formFiles)
+        public async Task<ICollection<Media>> SaveMedias(IEnumerable<IFormFile> formFiles)
         {
-            var mediaList = new List<Media>();
+            var mediaList = new HashSet<Media>();
 
-            foreach (var formFile in formFiles)
+            Parallel.ForEach(formFiles, item =>
             {
                 var todayDate = DateTime.Now.ToString("yyyyMMdd");
                 var todayTime = DateTime.Now.ToString("HHmmss");
@@ -65,19 +65,21 @@ namespace Bussines.Service.Abstract
 
                 var media = new Media
                 {
-                    RealFilename = formFile.FileName,
+                    RealFilename = item.FileName,
                     EncodedFilename = filenamehash,
                     FilePath = filePath,
                     RootPath = rootPath,
-                    AbsolutePath = $"{filePath}/{filenamehash}{Path.GetExtension(formFile.FileName)}",
-                    Size = formFile.Length,
+                    AbsolutePath = $"{filePath}/{filenamehash}{Path.GetExtension(item.FileName)}",
+                    Size = item.Length,
                     Deleted = false
                 };
+                
 
                 mediaList.Add(media);
-            }
+            });
 
-            var resultMediaList = await _genericRepository.AddModels(mediaList);
+
+            var resultMediaList = await _genericRepository.AddRangeAsync(mediaList);
 
             return resultMediaList;
 

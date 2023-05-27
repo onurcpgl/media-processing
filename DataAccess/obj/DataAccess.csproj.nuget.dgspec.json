@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\onurc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\onurs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\onurc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\onurs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj"
+              "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj"
               }
             }
           }
@@ -79,21 +79,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj": {
+    "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\onurc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\onurc\\OneDrive\\Masaüstü\\media-processing\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\onurs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\onurs\\OneDrive\\Masaüstü\\media-processing\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\onurc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\onurs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -140,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

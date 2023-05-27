@@ -122,5 +122,14 @@ namespace DataAccess.Repositories.Abstract
 
             return entities;
         }
+        public async Task<ICollection<T>> AddRangeAsync(IEnumerable<T> models)
+        {
+            await Table.AddRangeAsync(models);
+            await _dbContext.SaveChangesAsync();
+            return models.ToList();
+
+        }
+
+
     }
 }

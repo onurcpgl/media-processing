@@ -28,7 +28,7 @@ namespace Bussines.Service.Abstract
             {
                 var resultMedia = await _mediaService.SaveMedias(userDto.FormFiles);
                 var mapUser = _mapper.Map<User>(userDto);
-                mapUser.Medias = new List<Media>((IEnumerable<Media>)resultMedia);
+                mapUser.Medias = resultMedia;
                 var result = await _genericRepository.Add(mapUser);
                 return result;
 

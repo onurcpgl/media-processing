@@ -12,7 +12,7 @@ namespace Bussines.Service.Concrete
     public interface IMediaService
     {
         Task<Media> SaveMedia(IFormFile FormFile);
-        Task<ICollection<Media>> SaveMedias(ICollection<IFormFile> formFiles);
+        Task<ICollection<Media>> SaveMedias(IEnumerable<IFormFile> formFiles);
 
     }
 }
